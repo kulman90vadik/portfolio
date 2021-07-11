@@ -1,0 +1,65 @@
+.header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+    }
+}
+
+.logo {
+    display: block;
+    width: 64px;
+    height: 56px;
+}
+
+.menu {
+    margin-left: auto;
+    margin-right: 50px;
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-right: 45px;
+        }
+    }
+    &__link {
+        text-transform: uppercase;
+    }
+
+}
+
+
+.social {
+    display: flex;
+    align-items: center;
+    &__item {
+        &:not(:last-child) {
+            margin-right: 15px;
+        }
+    }
+    &__link {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        display: flex;
+        background-color: red;
+    }
+    &__icon {
+        margin: auto;
+        &--instagram {
+            width: 25px;
+            height: 25px;
+        }
+        &--vk {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
