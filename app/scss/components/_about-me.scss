@@ -1,0 +1,102 @@
+.page {
+    margin-bottom: 50px;
+    &__inner {
+        position: relative;
+        max-width: 1000px;
+        width: 100%;
+        border-radius: 10px;
+        background-color: #92a8b9;
+        border: 1px solid #404951;
+        margin: 0 auto;
+        padding: 30px;
+    }
+}
+
+
+
+
+
+
+.about-me {
+    padding-top: 70px;
+    &__content {
+        padding-top: 25px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+    }
+    &__photo {
+        max-width: 400px;
+        width: 100%;
+        height: auto;
+    }
+    &__heading {
+        position: relative;
+        font-family: $Ubuntu;
+        font-weight: $fw500;
+        max-width: 500px;
+        width: 100%;
+        font-size: 22px;
+        color: #000;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        background-color: rgba(184, 184, 184, 0.5);
+        border-radius: 10px;
+        &::after,
+        &::before {
+            position: absolute;
+            content: "";
+            border-style: solid;
+            width: 0;
+            height: 0;
+        }
+        &::after {
+            left: 0;
+            top: 0;
+            border-width: 50px 50px 0 0;
+            border-color: #1d283c transparent transparent transparent;
+        }
+        &::before {
+            bottom: 0;
+            right: 0;
+            border-width: 0 0 50px 50px;
+            border-color: transparent transparent #1d283c transparent;
+        }
+    }
+    &__text {
+        padding: 15px;
+        margin-bottom: 10px;
+        font-size: 18px;
+        color: #0c0c0c;
+        p {
+            margin-bottom: 10px;
+        }
+    }
+    &__subtitle {
+        font-size: 28px;
+        font-family: $Ubuntu;
+        font-weight: $fw500;
+        margin-bottom: 10px;
+    }
+    &__item {
+        &:not(:last-child) {
+            margin-bottom: 10px;
+        }
+    }
+    &__description {
+        @include lineClamp;
+        -webkit-line-clamp: 3;
+        font-size: 18px;
+    }
+    &__category {
+        color: #1b145a;
+        font-family: $Ubuntu;
+        background-color: transparent;
+        font-size: 20px;
+        font-weight: $fw500;
+        margin-right: 5px;
+        line-height: 1;
+    }
+}

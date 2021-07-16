@@ -14,6 +14,10 @@
     display: block;
     width: 64px;
     height: 56px;
+    outline: transparent;
+    &__images {
+        filter: brightness(0) invert(1);
+    }
 }
 
 .menu {
@@ -25,13 +29,53 @@
     }
     &__item {
         &:not(:last-child) {
-            margin-right: 45px;
+            margin-right: 35px;
         }
     }
     &__link {
+        font-weight: $fw500;
+        font-size: 21px;
         text-transform: uppercase;
+        color: #fffe27;
+        padding: 0 10px 10px 10px;
+        position: relative;
+        outline: transparent;
+        transition: color 0.3s ease-in;
+        &::after,
+        &::before {
+            position: absolute;
+            content: "";
+            bottom: 0;
+            width: 0;
+            height: 3px;
+            background-color:#fffe27;
+            transition: width 0.3s ease-in;
+        }
+        &::after {
+            right: 50%;
+        }
+        &::before {
+            left: 50%;
+        }
+        &:hover {
+            &::after,
+            &::before {
+                width: 50%;
+            }
+            color: #fff;
+        }
+        &:focus {
+            color: #7b6f80;
+        }
+        &:active {
+            color: $orange;
+            &::after,
+            &::before {
+                width: 50%;
+                background-color: $orange;
+            }
+        }
     }
-
 }
 
 
@@ -45,21 +89,63 @@
     }
     &__link {
         display: block;
-        width: 50px;
-        height: 50px;
+        width: 45px;
+        height: 45px;
         border-radius: 50%;
         display: flex;
-        background-color: red;
+        transition: background-color 0.3s ease-in, border-color 0.3s ease-in;
+        outline: transparent;
+        border: 1px solid transparent;
+        &--instagram {
+            background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+            &:hover {
+                background-image: none;
+                background-color: #fff;
+            }
+            &:hover .social__icon--instagram,
+            &:focus .social__icon--instagram{
+                fill: $orange;
+            }
+            &:focus {
+                border-color: $orange;
+                background-image: none;
+                background-color: transparent;
+            }
+            &:active {
+                border-color: transparent;
+                background-image: none;
+            }
+            &:active .social__icon--instagram{
+                fill: $orange;
+            }
+        }
+        &--vk {
+            background-color: #007fff;
+            &:hover {
+                background-color:#fff;
+            }
+            &:focus .social__icon--vk,
+            &:hover .social__icon--vk{
+                fill:#007fff;
+            }
+            &:focus {
+                border-color: #007fff;
+                background-color: transparent;
+            }
+            &:active {
+                border-color: transparent;
+                background-color: transparent;
+            }
+            &:active .social__icon--vk{
+                fill: #007fff;
+            }
+        }
     }
     &__icon {
         margin: auto;
-        &--instagram {
-            width: 25px;
-            height: 25px;
-        }
-        &--vk {
-            width: 25px;
-            height: 25px;
-        }
+        fill: #fff;
+        transition: fill 0.3s ease-in;
+        width: 25px;
+        height: 25px;
     }
 }
