@@ -18,4 +18,32 @@ $(function(){
         duration: 300,
         type: 'delayed'
     });
+    new Vivus('css', { 
+        duration: 300,
+        type: 'delayed'
+    });
+    new Vivus('js', { 
+        duration: 300,
+        type: 'delayed'
+    });
+    new Vivus('sass', { 
+        duration: 300,
+        type: 'delayed'
+    });
+    new Vivus('gulp', { 
+        duration: 300,
+        type: 'delayed'
+    });
+    new Vivus('git', { 
+        duration: 300,
+        type: 'delayed'
+    });
+    new Vivus('jquery', { 
+        duration: 300,
+        type: 'delayed'
+    });
+    new Vivus('figma', { 
+        duration: 300,
+        type: 'delayed'
+    });
 });
