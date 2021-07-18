@@ -1,0 +1,73 @@
+.portfolio {
+    padding-top: 45px;
+    &__list {
+        padding-top: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 2%;
+    }
+    &__item {
+        margin-bottom: 17px;
+        max-width: 49%;
+        width: 100%;
+        height: 260px;
+        display: flex;
+        object-fit: cover;
+        position: relative;
+        overflow: hidden;
+        &:hover {
+            .portfolio__link {
+                background-color: rgba(#1d283c, 0.9);
+                transform: scale(1);
+            }
+            .portfolio__images {
+                transform: translate(10px, 10px) scale(1.1);
+            }
+            .portfolio__name,
+            .portfolio__description {
+                transform: translateX(0);
+            }
+        }
+    }
+    &__images {
+        width: 100%;
+        transition: transform 0.3s ease-in;
+    }
+    &__link {
+        position: absolute;
+        transition: background-color 0.3s ease-in, transform 0.3s ease-in;
+        transform: scale(0);
+        border: 3px solid #fff;
+        left: 1px;
+        right: 1px;
+        bottom: 1px;
+        top: 1px;
+    }
+    &__name,
+    &__description {
+        position: absolute;
+        font-size: 18px;
+        transition: transform 0.4s ease-in;
+    }
+    &__description {
+        display: block;
+        max-width: 242px;
+        top: 20px;
+        left: 20px;
+        color: #fff;
+        transform: translateX(-150%);
+        @include lineClamp;
+        -webkit-line-clamp: 2;
+    }
+    &__name {
+        letter-spacing: 3px;
+        bottom: 20px;
+        right: 20px;
+        font-family: $Ubuntu;
+        font-weight: $fw700;
+        text-transform: uppercase;
+        @include lineClamp;
+        -webkit-line-clamp: 1;
+        transform: translateX(150%);
+    }
+}

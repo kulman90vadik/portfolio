@@ -1,7 +1,7 @@
 .home-page {
     height: 100vh;
     width: 100%;
-    position: relative;
+    // position: relative;
     &__inner {
         height: 100vh;
         display: flex;
@@ -50,12 +50,10 @@
     &__name {
         margin-bottom: 20px;
         font-size: 50px;
-        color: #13ffff;
+        color: #d2d3d3;
         font-weight: $fw500;
-        text-shadow: 0 0 2px #fff, 
-                -1px -1px 0 hsl(80, 70%, 35%),
-                -2px -2px 1px hsl(80, 72%, 48%),
-                -2px -2px 2px hsl(60, 2%, 9%);
+        letter-spacing: 3px;
+        font-family: $Ubuntu;
     }
     &__link {
         display: flex;
@@ -99,16 +97,6 @@
         animation-iteration-count: infinite;
         animation-duration: 2s;
         transform-origin: center bottom;
-    }
-    &::after {
-        position: absolute;
-        content: "";
-        width: 100%;
-        height: 170px;
-        bottom: -170px;
-        left: 0;
-        right: 0;
-        background-image: linear-gradient(to bottom, #1D283C 0%, #486496 40%, #A0A2A0 100%);
     }
 }
 

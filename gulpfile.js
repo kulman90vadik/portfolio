@@ -87,7 +87,8 @@ function scripts () {
         'node_modules/wow.js/dist/wow.js',
         'node_modules/vivus/dist/vivus.js',
         'node_modules/vanta/vendor/three.r119.min.js',
-        'node_modules/vanta/dist/vanta.rings.min.js',
+        // 'node_modules/vanta/dist/vanta.rings.min.js',
+        'node_modules/vanta/dist/vanta.net.min.js',
         'app/js/main.js'
     ])
     .pipe(concat('main.min.js'))

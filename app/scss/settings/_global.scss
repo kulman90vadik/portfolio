@@ -24,29 +24,23 @@ body {
     font-size: 16px;
     line-height: 1.5;
     color: #fff;
-    background-color: #A0A2A0;
+    background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
     display: flex;
     flex-direction: column;
-//     @include max($lg) {
-        // line-height: 1.5;
-        // font-size: 16px;
-//     }
+    @include max($lg) {
+        line-height: 1.5;
+        font-size: 16px;
+    }
 }
 
 .container {
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
-//     @include max($s) {
-//         padding: 0 10px;
-//     }
+    @include max($s) {
+        padding: 0 10px;
+    }
 }
-
-//  @include max($lg) {
-//     padding-top: 53px;
-//  }
-
-
 
 .title {
     position: relative;
@@ -59,6 +53,7 @@ body {
     font-family: $Ubuntu;
     font-weight: $fw700;
     color: #fff;
+    letter-spacing: 5px;
     &::after {
         position: absolute;
         left: 0;

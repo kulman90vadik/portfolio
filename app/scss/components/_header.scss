@@ -1,12 +1,62 @@
 .header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     z-index: 10;
+    background-color: #0c1622;
     &__inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         padding: 10px 0;
+        @include max($lg) {
+            padding: 5px 0;
+        }
+    }
+    &__btn {
+        padding: 0;
+        position: relative;
+        z-index: 15;
+        background-color: #4e7a9d;
+        border: none;
+        cursor: pointer;
+        outline: transparent;
+        width: 37px;
+        height: 37px;
+        padding: 5px;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        @include max($md) {
+            display: flex;
+            position: relative;
+            z-index: 60;
+        }
+    }
+    &__btn-item {
+        display: block;
+        transition: transform 0.4s ease-in;
+        width: 90%;
+        height: 3px;
+        background-color: #fff;
+        &:nth-child(2) {
+            margin: 5px 0;
+        }
+        &--active {
+            left: 4px;
+            width: 80%;
+            position: absolute;
+            &:nth-child(1) {
+                transform: rotate(-45deg);
+            }
+            &:nth-child(2) {
+                display: none;
+            }
+            &:nth-child(3) {
+                transform: rotate(45deg);
+            }
+        }
     }
 }
 
@@ -18,6 +68,10 @@
     &__images {
         filter: brightness(0) invert(1);
     }
+    @include max($xl) {
+        width: 53px;
+        height: 45px;
+    }
 }
 
 .menu {
@@ -26,18 +80,36 @@
     &__list {
         display: flex;
         align-items: center;
+        @include max($md) {
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
     }
     &__item {
         &:not(:last-child) {
             margin-right: 35px;
+            @include max($lg) {
+                margin-right: 15px;
+            }
+            @include max($md) {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+        @include max($md) {
+            width: 100%;
+            text-align: center;
         }
     }
     &__link {
         font-weight: $fw500;
-        font-size: 21px;
+        font-size: 18px;
         text-transform: uppercase;
         color: #fffe27;
-        padding: 0 10px 10px 10px;
+        padding: 0 5px 7px 5px;
         position: relative;
         outline: transparent;
         transition: color 0.3s ease-in;
@@ -47,7 +119,7 @@
             content: "";
             bottom: 0;
             width: 0;
-            height: 3px;
+            height: 2px;
             background-color:#fffe27;
             transition: width 0.3s ease-in;
         }
@@ -75,6 +147,32 @@
                 background-color: $orange;
             }
         }
+        @include max($lg) {
+            font-size: 16px;
+        }
+        @include max($md) {
+            width: 100%;
+            display: block;
+            padding: 7px 5px;
+        }
+    }
+    @include max($lg) {
+        margin-right: auto;
+    }
+    @include max($md) {
+        transform: translateX(-150%);
+        position: absolute;
+        height: 100vh;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        top: 0;
+        z-index: 55;
+        background-color: rgba(#000, 0.9);
+        transition: transform 0.4s ease-in;
+    }
+    &--active {
+        transform: translateX(0);
     }
 }
 
@@ -85,6 +183,9 @@
     &__item {
         &:not(:last-child) {
             margin-right: 15px;
+            @include max($lg) {
+                margin-right: 5px;
+            }
         }
     }
     &__link {
@@ -140,6 +241,10 @@
                 fill: #007fff;
             }
         }
+        @include max($xl) {
+            width: 37px;
+            height: 37px;
+        }
     }
     &__icon {
         margin: auto;
@@ -147,5 +252,13 @@
         transition: fill 0.3s ease-in;
         width: 25px;
         height: 25px;
+        @include max($xl) {
+            width: 22px;
+            height: 22px;
+        }
+    }
+    @include max($md) {
+        margin-left: auto;
+        margin-right: 15px;
     }
 }
