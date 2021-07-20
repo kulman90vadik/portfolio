@@ -82,7 +82,10 @@
         color: #fff;
         transform: translateX(-150%);
         @include lineClamp;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 3;
+    }
+    &__description-pages {
+        font-size: 15px;
     }
     &__name {
         letter-spacing: 3px;
