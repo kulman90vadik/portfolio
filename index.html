@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Кульман Вадим</title>
+    <link rel="shortcut icon" href="images/logo-title.png" type="image/png">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body id="body">
+    <header class="header">
+    <div class="container container--fluid">
+        <div class="header__inner">
+            <a class="logo" href="#body">
+                <img class="logo__images" src="images/logo.png" alt="Логотип">
+            </a>
+            <nav class="menu">
+                <ul class="menu__list">
+                    <li class="menu__item">
+                        <a class="menu__link" href="#about-me">Обо мне</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#skills">Навыки</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#portfolio">Портфолио</a>
+                    </li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="#contacts">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="social">
+                <li class="social__item">
+                    <a class="social__link social__link--instagram" target="_blanck" href="https://www.instagram.com/kulman_vadim">
+                        <svg class="social__icon social__icon--instagram" aria-label="Иконка инстаграмм">
+                            <use xlink:href="images/sprite.svg#instagram"></use>
+                        </svg> 
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--vk" target="_blanck" href="https://vk.com/wadikkulmann">
+                        <svg class="social__icon social__icon--vk" aria-label="иконка вконтакте">
+                            <use xlink:href="images/sprite.svg#vk"></use>
+                        </svg> 
+                    </a>
+                </li>
+            </ul>
+            <button class="header__btn" type="button" aria-label="Выпадающее меню">
+                <span class="header__btn-item"></span>
+                <span class="header__btn-item"></span>
+                <span class="header__btn-item"></span>
+            </button>
+        </div>
+    </div>
+</header>
+    <main class="main">
+        <section class="home-page">
+    <div class="container container--fluid">
+        <div class="home-page__inner">
+            <h1 class="home-page__title wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">Junior <mark class="home-page__title-html">html</mark> верстальщик</h1>
+            <span class="home-page__name wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="1.5s">Кульман Вадим</span>
+            <a class="home-page__link wow animate__fadeInLeft" href="#contacts" data-wow-duration="1s" data-wow-delay="2s">
+                <span class="home-page__text">
+                    Связаться со мной
+                </span>
+                <svg class="home-page__icon" aria-label="Анимированная стрелка, при клике переход блок с контакми">
+                    <use xlink:href="images/sprite.svg#arrow-down"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+        <section class="page about-me" id="about-me">
+    <div class="container">
+        <div class="page__inner about-me__inner">
+            <h2 class="title">Обо мне</h2>
+            <div class="about-me__content">
+                <div class="about-me__photo wow animate__fadeInLeft" data-wow-duration="1.5s" data-wow-offset="100">
+                    <img class="about-me__images" src="images/photo.jpg" alt="Моя фотография">
+                </div>
+                <div class="about-me__heading wow animate__fadeInRight"  data-wow-duration="1.5s" data-wow-offset="100">
+                    Приветствую Вас на своем сайте-портфолио. Меня зовут Вадим. Мне 31 год. Живу в городе Минске. Занимаюсь HTML-версткой сайтов.
+                </div> 
+            </div>
+            <div class="about-me__text">
+                <p>
+                    В 2019 году прошёл курс "Javascript-разработчик" в IT-школе GeekBrains. Cовсем недавно закончил курс "Вёрстка сайтов от 0 до 1". 
+                </p>
+                <p>
+                    Я постоянно развиваюсь в своей профессиональной области и всегда открыт новым идеям. Верстаю по стандартам W3C. Динамику сайта организую собственным jQuery, Javascript кодом или настроенными плагинами. У меня полностью кроссбраузерная, адаптивная и валидная верстка. В процессе работы над проектом я использую сборщик проектов Gulp для автоматизации процесса верстки, препроцессоры Scss/Sass для ускоренной стилизации сайта и более гибкого кода, PixelPerfect, BEM, система контроля версий Git, media-запросы для адаптивной верстки сайта.
+                </p>
+                <p>
+                    В конце работы осуществляется проверка отображения верстки в различных браузерах на разных устройствах, код проверяется валидатором на соответствие стандартам.
+                </p>
+            </div>
+            <div class="bout-me__info">
+                <h3 class="about-me__subtitle">Дополнительно</h3>
+                <ul class="about-me__list">
+                    <li class="about-me__item">
+                        <p class="about-me__description">
+                            <mark class="about-me__category">Образованиие:</mark>
+                            Высшее: "Белорусский государственный педагогический университет имени Максима Танка" (Исторический факультет, преподователь истории).
+                        </p>
+                    </li>
+                    <li class="about-me__item">
+                        <p class="about-me__description">
+                            <mark class="about-me__category">Владение языками:</mark>
+                            Английский - Elementary,
+                            Немецкий - Intermediate
+                        </p>
+                    </li>
+                    <li class="about-me__item">
+                        <p class="about-me__description">
+                            <mark class="about-me__category">Личные качества:</mark>
+                            Ответственность, Коммуникабельность, Пунктуальность, Аккуратность, Дружелюбность
+                        </p>
+                    </li>
+                    <li class="about-me__item">
+                        <p class="about-me__description">
+                            <mark class="about-me__category">Семейное положение:</mark>
+                            Женат, один ребёнок
+                        </p>
+                    </li>
+                    <li class="about-me__item">
+                        <p class="about-me__description">
+                            <mark class="about-me__category">Место работы, должность:</mark>
+                            Wargaming, администратор административно-хозяйственного отдела
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="page skills" id="skills">
+    <div class="container">
+        <div class="page__inner">
+            <h2 class="title">Навыки</h2>
+            <ul class="skills__holder">
+                <li class="skills__items skills__items--html wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+                    <object class="skills__icon" id="html" type="image/svg+xml" data="images/icons/html.svg" aria-label="Картинка html 5"></object>
+                    <span class="skills__category">Html 5</span>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            Семантичная разметка
+                        </li>
+                        <li class="skills__item">
+                            Методология БЭМ
+                        </li>
+                        <li class="skills__item">
+                            Контроль валидности кода
+                        </li>
+                        <li class="skills__item">
+                            Доступность интерфейсов
+                        </li>
+                        <li class="skills__item">
+                            Структутированный код
+                        </li>
+                    </ul>        
+                </li>
+
+                <li class="skills__items skills__items--css wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+                    <object  class="skills__icon" id="css" type="image/svg+xml" data="images/icons/css.svg" aria-label="Картинка css 3"></object>
+                    <span class="skills__category">Css 3</span>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            Плавные переходы, CSS-фильтры
+                        </li>
+                        <li class="skills__item">
+                            PixelPerfect
+                        </li>
+                        <li class="skills__item">
+                            Адаптивная верстка
+                        </li>
+                        <li class="skills__item">
+                            Кроссбраузерность
+                        </li>
+                        <li class="skills__item">
+                            Сетки на флексбоксах и гридах
+                        </li>
+                    </ul>     
+                </li>
+
+                <li class="skills__items skills__items--js wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+                    <object  class="skills__icon" id="js" type="image/svg+xml" data="images/icons/js.svg" aria-label="Картинка Javascript"></object>
+                    <span class="skills__category">Javascript</span>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            Обработка событий
+                        </li>
+                        <li class="skills__item">
+                            Обработка событий
+                        </li>
+                        <li class="skills__item">
+                            Генерация DOM-элементов из шаблонов
+                        </li>
+                        <li class="skills__item">
+                            Настроенные Js плагины
+                        </li>
+                    </ul>     
+                </li> 
+                
+                <li class="skills__items skills__items--sass wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+                    <object  class="skills__icon skills__icon--sass" id="sass" type="image/svg+xml" data="images/icons/sass.svg" aria-label="Картинка Sass"></object>
+                    <span class="skills__category">Scss/sass</span>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            Ускоренная стилизация сайта
+                        </li>
+                        <li class="skills__item">
+                            Более гибкий код
+                        </li>
+                        <li class="skills__item">
+                            Улучшенная логика стилей
+                        </li>
+                        <li class="skills__item">
+                            Упрощенный синтаксис
+                        </li>
+                        <li class="skills__item">
+                            Вложенность селекторов без ошибок
+                        </li>
+                    </ul>     
+                </li> 
+
+                <li class="skills__items skills__items--gulp wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+                    <object  class="skills__icon skills__icon--gulp" id="gulp" type="image/svg+xml" data="images/icons/gulp.svg" aria-label="Картинка gulp"></object>
+                    <span class="skills__category">gulp</span>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            Быстрое разворачивание проекта
+                        </li>
+                        <li class="skills__item">
+                            Автоматизация процесса верстки
+                        </li>
+                        <li class="skills__item">
+                            Компиляция препроцессоров
+                        </li>
+                        <li class="skills__item">
+                            Использование шаблонизаторов
+                        </li>
+                        <li class="skills__item">
+                            Минификация файлов
+                        </li>
+                    </ul>     
+                </li> 
+
+                <li class="skills__items skills__items--git wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+                    <object  class="skills__icon skills__icon--git" id="git" type="image/svg+xml" data="images/icons/git.svg" aria-label="Картинка git"></object>
+                    <span class="skills__category">git</span>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            Параллельно работа над проектом
+                        </li>
+                        <li class="skills__item">
+                            Работа в командной строке
+                        </li>
+                        <li class="skills__item">
+                            Развёртывание репозитория на gh-pages 
+                        </li>
+                        <li class="skills__item">
+                            Создание/удавление веток
+                        </li>
+                    </ul>     
+                </li> 
+
+                <li class="skills__items skills__items--jquery wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+                    <object  class="skills__icon skills__icon--jquery" id="jquery" type="image/svg+xml" data="images/icons/jquery.svg" aria-label="Картинка jquery"></object>
+                    <span class="skills__category">jquery</span>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            Параллельно работа над проектом
+                        </li>
+                        <li class="skills__item">
+                            Работа в командной строке
+                        </li>
+                        <li class="skills__item">
+                            Развёртывание репозитория на gh-pages 
+                        </li>
+                        <li class="skills__item">
+                            Создание/удавление веток
+                        </li>
+                    </ul>     
+                </li> 
+
+                <li class="skills__items skills__items--figma wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+                    <object  class="skills__icon skills__icon--figma" id="figma" type="image/svg+xml" data="images/icons/figma.svg" aria-label="Картинка figma"></object>
+                    <span class="skills__category">Figma/Photoshop</span>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            Нарезка изображений из макета
+                        </li>
+                        <li class="skills__item">
+                            Оптимизация изображений для Web
+                        </li>
+                        <li class="skills__item">
+                            Экспорт SVG-изображений
+                        </li>
+                        <li class="skills__item">
+                            Создание спрайтов
+                        </li>
+                    </ul>     
+                </li> 
+
+                <li class="skills__items skills__items--animation wow animate__fadeInUp" data-wow-duration="1s" data-wow-offset="100">
+                    <div class="skills__animation">
+                        <div class="skills__animation-item skills__animation-one" aria-label="Анимированные круги"></div>
+                        <div class="skills__animation-item skills__animation-two" aria-label="Анимированные круги"></div>
+                        <div class="skills__animation-item skills__animation-three" aria-label="Анимированные круги"></div>
+                    </div>
+                    <span class="skills__category">Animation</span>
+                    <ul class="skills__list">
+                        <li class="skills__item">
+                            Анимация на чистом Css
+                        </li>
+                        <li class="skills__item">
+                            Анимация при :hover
+                        </li>
+                        <li class="skills__item">
+                            Бесконечная анимация
+                        </li>
+                        <li class="skills__item">
+                            Установка ключевых кадров
+                        </li>
+                    </ul>     
+                </li> 
+
+            </ul>
+        </div>    
+    </div>   
+</section>    
+        <section class="page portfolio" id="portfolio">
+    <div class="container">
+        <div class="page__inner">
+            <h2 class="title">Портфолио</h2>
+            <ul class="portfolio__list">
+                <li class="portfolio__item wow animate__zoomIn" data-wow-duration="1s" data-wow-offset="100">
+                    <img class="portfolio__images" src="images/portfolio/ck.jpg" alt="Картинка сайта Ск инфраструктура">
+                    <a class="portfolio__link" href="https://kulman90vadik.github.io/ck/" target="_blanck" aria-label="Переход на страницу сайта"></a>
+                    <div class="portfolio__name">"Ск инфраструктура"</div>
+                    <span class="portfolio__description">Лэндинг пейдж строительной компании</span>
+                </li>
+                <li class="portfolio__item wow animate__zoomIn" data-wow-duration="1s" data-wow-offset="100">
+                    <img class="portfolio__images" src="images/portfolio/glee.jpg" alt="Картинка сайта интернет магазин">
+                    <a class="portfolio__link" href="https://kulman90vadik.github.io/gleee/" target="_blanck" aria-label="Переход на страницу сайта"></a>
+                    <div class="portfolio__name">"Glee"</div>
+                    <span class="portfolio__description">Интернет магазин мягкой мебели</span>
+                </li>
+                <li class="portfolio__item wow animate__zoomIn" data-wow-duration="1s" data-wow-offset="100">
+                    <img class="portfolio__images" src="images/portfolio/desing.jpg" alt="Картинка сайта Deluxe house">
+                    <a class="portfolio__link" href="https://kulman90vadik.github.io/desing-dev/" target="_blanck" aria-label="Переход на страницу сайта"></a>
+                    <div class="portfolio__name">"Deluxe house"</div>
+                    <span class="portfolio__description">Лэндинг пейдж дизайн интерьера</span>
+                </li>
+                <li class="portfolio__item wow animate__zoomIn" data-wow-duration="1s" data-wow-offset="100">
+                    <img class="portfolio__images" src="images/portfolio/dreams.jpg" alt="Картинка сайта Dreams">
+                    <a class="portfolio__link" href="https://kulman90vadik.github.io/dreamss/" target="_blanck" aria-label="Переход на страницу сайта"></a>
+                    <div class="portfolio__name">"Dreams"</div>
+                    <span class="portfolio__description">Лэндинг пейдж туристической компании</span>
+                </li>
+                <li class="portfolio__item wow animate__zoomIn" data-wow-duration="1s" data-wow-offset="100">
+                    <img class="portfolio__images" src="images/portfolio/wawe.png" alt="Картинка сайта Wawe">
+                    <a class="portfolio__link" href="https://kulman90vadik.github.io/my-wawe/" target="_blanck" aria-label="Переход на страницу сайта"></a>
+                    <div class="portfolio__name">"Wawe"</div>
+                    <span class="portfolio__description">Лэндинг пейдж школы сёрфинга</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>            
+        <section class="page contacts" id="contacts" >
+    <div class="container">
+        <div class="page__inner contacts__inner" style="background-image: url(images/contacts-bg.png);">
+            <h2 class="title contacts__title">Контакты</h2>
+            <ul class="contacts__list">
+
+                <li class="contacts__item contacts__item--phone">
+                    <svg class="contacts__circle" preserveAspectRatio="xMinYMin meet" viewBox="0 0 200 200">  
+                        <circle cx="100" cy="100" r="50"/>
+                    </svg>
+                    <div class="contacts__social">
+                        <svg class="contacts__icon" aria-label="Иконка инстаграмм">
+                            <use xlink:href="images/sprite.svg#phone"></use>
+                        </svg> 
+                    </div>
+                    <a class="contacts__link"  href="tel:+375297330779" aria-label="Произойдёт вызов"></a>
+                </li>
+
+                <li class="contacts__item contacts__item--telegram">
+                    <svg class="contacts__circle" preserveAspectRatio="xMinYMin meet" viewBox="0 0 200 200">  
+                        <circle cx="100" cy="100" r="50"/>
+                    </svg>
+                    <div class="contacts__social">
+                        <svg class="contacts__icon" aria-label="Иконка телеграмм">
+                            <use xlink:href="images/sprite.svg#telegram"></use>
+                        </svg> 
+                    </div>
+                    <a class="contacts__link"  href="tel:+375297330779" aria-label="Произойдёт вызов"></a>
+                </li>
+
+                <li class="contacts__item contacts__item--viber">
+                    <svg class="contacts__circle" preserveAspectRatio="xMinYMin meet" viewBox="0 0 200 200">  
+                        <circle cx="100" cy="100" r="50"/>
+                    </svg>
+                    <div class="contacts__social">
+                        <svg class="contacts__icon" aria-label="Иконка вайбер">
+                            <use xlink:href="images/sprite.svg#viber"></use>
+                        </svg> 
+                    </div>
+                    <a class="contacts__link"  href="tel:+375297330779" aria-label="Произойдёт вызов"></a>
+                </li>
+
+                <li class="contacts__item contacts__item--whatsapp">
+                    <svg class="contacts__circle" preserveAspectRatio="xMinYMin meet" viewBox="0 0 200 200">  
+                        <circle cx="100" cy="100" r="50"/>
+                    </svg>
+                    <div class="contacts__social">
+                        <svg class="contacts__icon" aria-label="Иконка whatsapp">
+                            <use xlink:href="images/sprite.svg#whatsapp"></use>
+                        </svg> 
+                    </div>
+                    <a class="contacts__link"  href="tel:+375297330779" aria-label="Произойдёт вызов"></a>
+                </li>
+
+                <li class="contacts__item contacts__item--skype">
+                    <svg class="contacts__circle" preserveAspectRatio="xMinYMin meet" viewBox="0 0 200 200">  
+                        <circle cx="100" cy="100" r="50"/>
+                    </svg>
+                    <div class="contacts__social">
+                        <svg class="contacts__icon" aria-label="Иконка skype">
+                            <use xlink:href="images/sprite.svg#skype"></use>
+                        </svg> 
+                    </div>
+                    <a class="contacts__link" target="_blanck" href="https://join.skype.com/invite/G8hLSSmsynij" aria-label="Произойдёт вызов"></a>
+                </li>
+                <li class="contacts__item contacts__item--email">
+                    <svg class="contacts__circle" preserveAspectRatio="xMinYMin meet" viewBox="0 0 200 200">  
+                        <circle cx="100" cy="100" r="50"/>
+                    </svg>
+                    <div class="contacts__social">
+                        <svg class="contacts__icon" aria-label="Иконка email">
+                            <use xlink:href="images/sprite.svg#email"></use>
+                        </svg> 
+                    </div>
+                    <a class="contacts__link"  href="mailto:vadim.kulman90@mail.ru" aria-label="Возможность написать на почту"></a>
+                </li>
+
+            </ul>
+            <a class="contacts__links contacts__links--git" href="https://github.com/kulman90vadik/" target="_blanck">
+                <svg class="contacts__links-icon" aria-label="Иконка github">
+                    <use xlink:href="images/sprite.svg#github"></use>
+                </svg> 
+                <p class="contacts__text">Мой профиль GitHub</p>
+            </a>
+            <a class="contacts__links" href="mailto:vadim.kulman90@mail.ru" target="_blanck">
+                <svg class="contacts__links-icon" aria-label="Иконка post">
+                    <use xlink:href="images/sprite.svg#post"></use>
+                </svg> 
+                <p class="contacts__text">vadim.kulman90@mail.ru</p>
+            </a>
+        </div>
+    </div>
+</section>            
+
+    </main>    
+    <section class="footer">
+    <div class="container">
+        <div class="footer__inner">
+            <ul class="social footer__social">
+                <li class="social__item">
+                    <a class="social__link social__link--instagram" target="_blanck" href="https://www.instagram.com/kulman_vadim">
+                        <svg class="social__icon social__icon--instagram" aria-label="Иконка инстаграмм">
+                            <use xlink:href="images/sprite.svg#instagram"></use>
+                        </svg> 
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--vk" target="_blanck" href="https://vk.com/wadikkulmann">
+                        <svg class="social__icon social__icon--vk" aria-label="иконка вконтакте">
+                            <use xlink:href="images/sprite.svg#vk"></use>
+                        </svg> 
+                    </a>
+                </li>
+            </ul>
+            <div class="footer__text">
+                <p>
+                    &copy; Портфолио 2021 -  Кульман Вадим
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+    <script src="js/main.min.js"></script>
+</body>
+</html>
