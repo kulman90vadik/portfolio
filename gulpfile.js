@@ -121,12 +121,6 @@ function build () {
     .pipe(dest('dist'))
 }
 
-
-gulp.task('fonts', function() {
-    return gulp.src('app/fonts/**/*')
-    .pipe(gulp.dest('dist/fonts'))
-})
-
 function cleanDist () {
     return del('dist')
 }
