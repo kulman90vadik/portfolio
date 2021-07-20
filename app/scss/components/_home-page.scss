@@ -1,7 +1,7 @@
 .home-page {
     height: 100vh;
     width: 100%;
-    // position: relative;
+    margin-bottom: 25px;
     &__inner {
         height: 100vh;
         display: flex;
@@ -15,6 +15,16 @@
         margin-bottom: 15px;
         @include lineClamp;
         -webkit-line-clamp: 2;
+        @include max($lg) {
+            font-size: 39px;
+            margin-bottom: 0;
+        }
+        @include max($md) {
+            font-size: 35px;
+        }
+        @include max($sm) {
+            line-height: 1.2;
+        }
     }
     &__title-html {
         font-size: 50px;
@@ -36,7 +46,6 @@
             height: 33px;
             transform: translateY(-50%);
             @include bg;
-
         }
         &::after {
             left: 0;
@@ -46,6 +55,15 @@
             right: 0;
             background-image: url(../images/icons/arrow-right.svg);
         }
+        @include max($lg) {
+            font-size: 40px;
+        }
+        @include max($md) {
+            font-size: 32px;
+        }
+        @include max($sm) {
+            line-height: 1.2;
+        }
     }
     &__name {
         margin-bottom: 20px;
@@ -54,6 +72,13 @@
         font-weight: $fw500;
         letter-spacing: 3px;
         font-family: $Ubuntu;
+        @include max($lg) {
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+        @include max($md) {
+            font-size: 28px;
+        }
     }
     &__link {
         display: flex;

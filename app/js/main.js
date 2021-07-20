@@ -5,21 +5,6 @@ $(function(){
         $('.header__btn-item').toggleClass('header__btn-item--active');
     });
 
-
-    // VANTA.RINGS({
-    //     el: ".home-page",
-    //     mouseControls: true,
-    //     touchControls: true,
-    //     gyroControls: false,
-    //     minHeight: 200.00,
-    //     minWidth: 200.00,
-    //     scale: 1.00,
-    //     scaleMobile: 1.00,
-    //     backgroundColor: 0x1d283c,
-    //     color: 0x61ac1b
-    // })
-
-
     VANTA.NET({
         el: ".home-page",
         mouseControls: true,
@@ -36,39 +21,14 @@ $(function(){
         spacing: 11.00
     });
 
+    const anim = ['html', 'css', 'js', 'sass', 'gulp', 'git', 'jquery', 'figma'];
 
-    new Vivus('html', { 
-        duration: 300,
-        type: 'delayed'
-    });
-    new Vivus('css', { 
-        duration: 300,
-        type: 'delayed'
-    });
-    new Vivus('js', { 
-        duration: 300,
-        type: 'delayed'
-    });
-    new Vivus('sass', { 
-        duration: 300,
-        type: 'delayed'
-    });
-    new Vivus('gulp', { 
-        duration: 300,
-        type: 'delayed'
-    });
-    new Vivus('git', { 
-        duration: 300,
-        type: 'delayed'
-    });
-    new Vivus('jquery', { 
-        duration: 300,
-        type: 'delayed'
-    });
-    new Vivus('figma', { 
-        duration: 300,
-        type: 'delayed'
-    });
+    anim.forEach(id =>
+        new Vivus(id, {
+            duration: 300,
+            type: 'delayed'
+        })
+    );
 
     $('.menu__link, .logo, .home-page__link').on('click', function (event) {
         event.preventDefault();
@@ -76,12 +36,10 @@ $(function(){
         var top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1500);
 
-        // !
-        // $('.menu').removeClass('menu--active');
-        // $('.header__btn-item').removeClass('header__btn-item--active');
+        $('.menu').removeClass('menu--active');
+        $('.header__btn-item').removeClass('header__btn-item--active');
     });
 
-
-
+    new WOW().init();
 
 });

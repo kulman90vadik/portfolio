@@ -10,27 +10,41 @@
         border: 1px solid #404951;
         margin: 0 auto;
         padding: 30px;
+        @include max($lg) {
+            padding: 20px;
+        }
+        @include max($sm) {
+            padding: 5px;
+        }
+    }
+    @include max($lg) {
+        margin: 20px;
     }
 }
-
-
-
-
-
 
 .about-me {
     padding-top: 44px;
     &__content {
         padding-top: 50px;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         margin-bottom: 20px;
+        @include max($lg) {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 30px;
+        }
+        @include max($sm) {
+            padding-top: 15px;
+        }
     }
     &__photo {
         max-width: 400px;
         width: 100%;
-        height: auto;
+        height: 270px;
         position: relative;
+        display: flex;
+        margin-right: 31px;
         &::after,
         &::before {
             position: absolute;
@@ -42,12 +56,30 @@
             border: 5px solid #fff;
             z-index: 1;
             background-color: rgba(184,184,184,0.5);
+            @include max($sm) {
+                display: none;
+            }
         }
         &::after {
             transform: rotate(-6deg);
         }
         &::before {
             transform: rotate(6deg);
+        }
+        @include max($lg) {
+            max-width: 450px;
+            margin-right: 0;
+            margin-bottom: 40px;
+        }
+        @include max($md) {
+            max-width: 370px;
+            height: 234px;
+        }
+        @include max($sm) {
+            margin-bottom: 15px;
+        }
+        @include max($s) {
+            height: 175px;
         }
     }
     &__images {
@@ -76,6 +108,9 @@
             border-style: solid;
             width: 0;
             height: 0;
+            @include max($s) {
+                display: none;
+            }
         }
         &::after {
             left: 0;
@@ -89,6 +124,17 @@
             border-width: 0 0 50px 50px;
             border-color: transparent transparent #1d283c transparent;
         }
+        @include max($lg) {
+            max-width: 100%;
+            padding: 15px 30px;
+        }
+        @include max($md) {
+            font-size: 20px;
+        }
+        @include max($s) {
+            padding: 10px;
+            font-size: 18px;
+        }
     }
     &__text {
         padding: 15px;
@@ -98,21 +144,35 @@
         p {
             margin-bottom: 10px;
         }
+        @include max($lg) {
+            padding: 0;
+        }
+        @include max($sm) {
+            font-size: 16px;
+            padding: 0;
+        }
     }
     &__subtitle {
         font-size: 28px;
         font-family: $Ubuntu;
         font-weight: $fw500;
         margin-bottom: 10px;
+        @include max($sm) {
+            font-size: 22px;
+            margin-bottom: 0;
+        }
     }
     &__item {
         &:not(:last-child) {
             margin-bottom: 10px;
+            @include max($lg) {
+                margin-bottom: 5px;
+            }
         }
     }
     &__description {
         @include lineClamp;
-        -webkit-line-clamp: 3;
+        -webkit-line-clamp: 8;
         font-size: 18px;
     }
     &__category {
@@ -123,5 +183,11 @@
         font-weight: $fw500;
         margin-right: 5px;
         line-height: 1;
+    }
+    @include max($xl) {
+        padding-top: 34px;
+    }
+    @include max($sm) {
+        padding-top: 49px;
     }
 }

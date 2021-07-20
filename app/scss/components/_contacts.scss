@@ -6,9 +6,26 @@
         @include bg;
         display: flex;
         flex-direction: column;
+        @include max($lg) {
+            height: 430px;
+        }
+        @include max($md) {
+            background-position: inherit;
+        }
+        @include max($sm) {
+            padding: 10px;
+            height: 380px;
+        }
+        @include max($s) {
+            height: auto;
+            padding-bottom: 25px;
+        }
     }
     &__title {
         margin-bottom: 20px;
+        @include max($md) {
+            margin-bottom: 0;
+        }
     }
     &__list {
         margin-bottom: 20px;
@@ -17,6 +34,12 @@
         max-width: 310px;
         width: 100%;
         justify-content: space-between;
+        @include max($md) {
+            margin: 0 auto 15px;
+        }
+        @include max($s) {
+            justify-content: center;
+        }
     }
     &__link {
         position: absolute;
@@ -130,6 +153,7 @@
         display: inline-flex;
         align-items: center;
         outline: transparent;
+        max-width: 310px;
         &--git {
             margin-bottom: 20px;
         }
@@ -157,7 +181,10 @@
                 fill: #665e22;
             }
         }
-
+        @include max($s) {
+            flex-direction: column;
+            justify-content: center;
+        }
     }
     &__links-icon {
         width: 30px;
@@ -165,12 +192,22 @@
         fill: #fff;
         margin-right: 20px;
         transition: fill 0.3s ease-in;
+        @include max($s) {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
     }
     &__text {
         color: #f0dd50;
         transition: color 0.3s ease-in;
         @include lineClamp;
         -webkit-line-clamp: 1;
+    }
+    @include max($xl) {
+        padding-top: 34px;
+    }
+    @include max($sm) {
+        padding-top: 44px;
     }
 }
 

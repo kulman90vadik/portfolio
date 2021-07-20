@@ -37,8 +37,13 @@ body {
     max-width: 1200px;
     padding: 0 15px;
     margin: 0 auto;
-    @include max($s) {
-        padding: 0 10px;
+    @include max($sm) {
+        padding: 0 5px;
+    }
+    &--fluid {
+        @include max($sm) {
+            padding: 0 10px;
+        }
     }
 }
 
@@ -69,5 +74,16 @@ body {
         content:'';
         border-top: 10px solid #090f1b;
         border-right: 10px solid transparent;
+    }
+    @include max($lg) {
+        padding: 10px 30px;
+        margin-left: -31px; 
+        margin-right: -31px;
+    }
+    @include max($sm) {
+        margin-left: -16px; 
+        margin-right: -16px;
+        font-size: 23px;
+        padding: 5px 30px;
     }
 }

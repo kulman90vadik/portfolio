@@ -8,6 +8,9 @@
     }
     &__social {
         margin-bottom: 20px;
+        @include max($md) {
+            margin: 0 0 10px;
+        }
     }
     &__text {
         font-family: $Ubuntu;
@@ -15,5 +18,8 @@
             @include lineClamp;
             -webkit-line-clamp: 1;
         }
+    }
+    @include max($lg) {
+        padding: 120px 0 15px;
     }
 }
