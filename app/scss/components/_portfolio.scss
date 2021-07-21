@@ -83,6 +83,10 @@
         transform: translateX(-150%);
         @include lineClamp;
         -webkit-line-clamp: 3;
+        @include max($sm) {
+            top: 5px;
+            left: 5px;
+        }
     }
     &__description-pages {
         font-size: 15px;
@@ -97,6 +101,11 @@
         @include lineClamp;
         -webkit-line-clamp: 1;
         transform: translateX(150%);
+        @include max($sm) {
+            bottom: 5px;
+            right: 5px;
+            letter-spacing: 1px;
+        }
     }
     @include max($xl) {
         padding-top: 34px;
