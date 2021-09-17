@@ -21,6 +21,8 @@
         }
         @include max($md) {
             font-size: 35px;
+            @include lineClamp;
+            -webkit-line-clamp: 5;
         }
         @include max($sm) {
             line-height: 1.2;
