@@ -57,21 +57,29 @@
 </header>
     <main class="main">
         <section class="home-page">
-    <div class="container container--fluid">
-        <div class="home-page__inner">
-            <h1 class="home-page__title wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="2s"><mark class="home-page__title-html">html</mark> верстальщик <div>Junior Frontend developer</div></h1>
-            <span class="home-page__name wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="2.5s">Кульман Вадим</span>
-            <a class="home-page__link wow animate__fadeInLeft" href="#contacts" data-wow-duration="1s" data-wow-delay="3s">
-                <span class="home-page__text">
-                    Связаться со мной
-                </span>
-                <svg class="home-page__icon" aria-label="Анимированная стрелка, при клике переход блок с контакми">
-                    <use xlink:href="images/sprite.svg#arrow-down"></use>
-                </svg>
-            </a>
+    <div class="home-page__animation">
+        <img class="home-page__images" src="../images/moon.png" alt="Луна">
+        <div class="home-page__stars"></div>
+        <div class="home-page__twinkling"></div>
+        <div class="home-page__clouds"></div>
+        <div class="container container--fluid">
+            <div class="home-page__inner">
+                <h1 class="home-page__title wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="2s"><mark class="home-page__title-html">html</mark> верстальщик <div>Junior Frontend developer</div></h1>
+                <span class="home-page__name wow animate__fadeInLeft" data-wow-duration="1s" data-wow-delay="2.5s">Кульман Вадим</span>
+                <a class="home-page__link wow animate__fadeInLeft" href="#contacts" data-wow-duration="1s" data-wow-delay="3s">
+                    <span class="home-page__text">
+                        Связаться со мной
+                    </span>
+                    <svg class="home-page__icon" aria-label="Анимированная стрелка, при клике переход блок с контакми">
+                        <use xlink:href="images/sprite.svg#arrow-down"></use>
+                    </svg>
+                </a>
+            </div>
         </div>
-    </div>
+    </div> 
 </section>
+
+
         <section class="page about-me" id="about-me">
     <div class="container">
         <div class="page__inner about-me__inner">
@@ -486,8 +494,7 @@
     </div>
 </section>            
 
-    </main>    
-    <section class="footer">
+        <footer class="footer">
     <div class="container">
         <div class="footer__inner">
             <ul class="social footer__social">
@@ -513,7 +520,8 @@
             </div>
         </div>
     </div>
-</section>
+</footer>
+    </main>    
     <script src="js/main.min.js"></script>
 </body>
 </html>
