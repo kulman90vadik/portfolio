@@ -1,8 +1,14 @@
 .header {
     position: fixed;
+    top: 0;
     width: 100%;
     z-index: 10;
-    background-color: #0c1622;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in;
+    &--active {
+        background-color: #4c5c4e;
+        transition: background-color 0.3s ease-in;
+    }
     &__inner {
         display: flex;
         align-items: center;

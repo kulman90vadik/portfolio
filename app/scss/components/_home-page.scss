@@ -1,9 +1,68 @@
 .home-page {
     height: 100vh;
     width: 100%;
-    margin-bottom: 25px;
+    &__animation{
+        position: fixed;
+        top: 0;
+        left:0;
+        bottom: 0;
+        right: 0;
+    }
+    &__stars {
+        background: black url("../images/stars.png") repeat;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        z-index: 0;
+    }
+    &__twinkling{
+        width: 10000px;
+        height: 100%;
+        background: transparent url("../images/twinkling.png") repeat;
+        background-size: 1000px 1000px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 2;
+        animation: move-background 70s linear infinite;
+    }
+    &__clouds{
+        width: 10000px;
+        height: 100%;
+        background: transparent url("../images/clouds.png") repeat;
+        background-size: 1000px 1000px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        z-index: 3;
+        animation: move-background 150s linear infinite;
+    }
+    &__images{
+        height: 70vh;
+        width: 70vh;
+        position: absolute;
+        z-index: 3;
+        top: 20px;
+        right: 20px;
+        @include max($sm) {
+            height: 54vh;
+            width: 54vh;
+            right: 10px;
+        }
+        @include max($s) {
+            height: 44vh;
+            width: 44vh;
+        }
+    }
     &__inner {
         height: 100vh;
+        position: absolute;
+        z-index: 55;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -15,6 +74,7 @@
         margin-bottom: 15px;
         @include lineClamp;
         -webkit-line-clamp: 2;
+        transition: opacity 0.5s ease-in;
         @include max($lg) {
             font-size: 39px;
             margin-bottom: 0;
@@ -27,6 +87,10 @@
         @include max($sm) {
             line-height: 1.2;
         }
+    }
+    &__title--outLeft {
+        transition: opacity 0.5s ease-in;
+        opacity: 0;
     }
     &__title-html {
         font-size: 50px;
@@ -74,6 +138,7 @@
         font-weight: $fw500;
         letter-spacing: 3px;
         font-family: $Ubuntu;
+        transition: opacity 0.7s ease-in;
         @include max($lg) {
             font-size: 35px;
             margin-bottom: 10px;
@@ -81,6 +146,10 @@
         @include max($md) {
             font-size: 28px;
         }
+    }
+    &__name--outLeft {
+        transition: opacity 0.7s ease-in;
+        opacity: 0;
     }
     &__link {
         display: flex;
@@ -95,7 +164,7 @@
         border-radius: 5px;
         background: #3b3c3d linear-gradient(#636c72, #1d283c);
         box-shadow: 0 1px rgb(255, 255, 255) inset;
-        transition: color 0.3s ease-in, box-shadow 0.3s ease-in, border-color 0.3s ease-in;
+        transition: color 0.3s ease-in, box-shadow 0.3s ease-in, border-color 0.3s ease-in, opacity 0.9s ease-in;
         &:hover {
             color: #fffe27;
         }
@@ -109,6 +178,10 @@
             box-shadow: 0 1px rgb(131, 130, 130);
             border-color: transparent;
         }
+    }
+    &__link--outLeft {
+        transition: opacity 0.9s ease-in;
+        opacity: 0;
     }
     &__text {
         margin-right: 10px;
@@ -146,5 +219,14 @@
     }
     90% {
         transform: translate3d(0, -2px, 0) scaleY(1.02);
+    }
+}
+
+@keyframes move-background {
+    from {
+        transform: translate3d(0px, 0px, 0px);
+    }
+    to { 
+        transform: translate3d(1000px, 0px, 0px);
     }
 }

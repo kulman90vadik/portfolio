@@ -1,24 +1,25 @@
-$(function(){
+
+window.addEventListener("load", function(){
 
     $('.header__btn').on('click', function(){
         $('.menu').toggleClass('menu--active');
         $('.header__btn-item').toggleClass('header__btn-item--active');
     });
 
-    VANTA.NET({
-        el: ".home-page",
-        mouseControls: true,
-        touchControls: true,
-        gyroControls: false,
-        minHeight: 200.00,
-        minWidth: 200.00,
-        scale: 1.00,
-        scaleMobile: 1.00,
-        color: 0x2d88e3,
-        backgroundColor: 0xc1622,
-        points: 8.00,
-        maxDistance: 18.00,
-        spacing: 11.00
+    window.addEventListener('scroll', function(){
+        console.log(window.scrollY);
+        if(window.scrollY >= 100) {
+            document.querySelector('.header').classList.add('header--active');
+            document.querySelector('.home-page__title').classList.add('home-page__title--outLeft');
+            document.querySelector('.home-page__name').classList.add('home-page__name--outLeft');
+            document.querySelector('.home-page__link').classList.add('home-page__link--outLeft');
+        }
+        else {
+            document.querySelector('.header').classList.remove('header--active');
+            document.querySelector('.home-page__title').classList.remove('home-page__title--outLeft');
+            document.querySelector('.home-page__name').classList.remove('home-page__name--outLeft');
+            document.querySelector('.home-page__link').classList.remove('home-page__link--outLeft');
+        }
     });
 
     const anim = ['html', 'css', 'js', 'sass', 'gulp', 'git', 'jquery', 'figma'];
@@ -41,5 +42,4 @@ $(function(){
     });
 
     new WOW().init();
-
 });
