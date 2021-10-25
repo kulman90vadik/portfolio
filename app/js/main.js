@@ -1,13 +1,20 @@
+$(function(){
+// window.addEventListener("load", function(){
 
-window.addEventListener("load", function(){
+    // $('.header__btn').on('click', function(){
+    //     $('.menu').toggleClass('menu--active');
+    //     $('.header__btn-item').toggleClass('header__btn-item--active');
+    // });
 
-    $('.header__btn').on('click', function(){
-        $('.menu').toggleClass('menu--active');
-        $('.header__btn-item').toggleClass('header__btn-item--active');
+    let headerItems = document.querySelectorAll('.header__btn-item');
+    document.querySelector('.header__btn').addEventListener('click', function(){
+        document.querySelector('.menu').classList.toggle('menu--active');
+        headerItems.forEach(elem => {
+            elem.classList.toggle('header__btn-item--active');
+        });
     });
 
     window.addEventListener('scroll', function(){
-        console.log(window.scrollY);
         if(window.scrollY >= 100) {
             document.querySelector('.header').classList.add('header--active');
             document.querySelector('.home-page__title').classList.add('home-page__title--outLeft');
@@ -23,7 +30,6 @@ window.addEventListener("load", function(){
     });
 
     const anim = ['html', 'css', 'js', 'sass', 'gulp', 'git', 'jquery', 'figma'];
-
     anim.forEach(id =>
         new Vivus(id, {
             duration: 300,
