@@ -1,11 +1,6 @@
 $(function(){
 // window.addEventListener("load", function(){
 
-    // $('.header__btn').on('click', function(){
-    //     $('.menu').toggleClass('menu--active');
-    //     $('.header__btn-item').toggleClass('header__btn-item--active');
-    // });
-
     let headerItems = document.querySelectorAll('.header__btn-item');
     document.querySelector('.header__btn').addEventListener('click', function(){
         document.querySelector('.menu').classList.toggle('menu--active');
