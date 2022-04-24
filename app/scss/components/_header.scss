@@ -157,7 +157,7 @@
         &:hover {
             &::after,
             &::before {
-                width: 50%;
+                width: 49%;
             }
             color: #fff;
         }
@@ -168,7 +168,7 @@
             color: $orange;
             &::after,
             &::before {
-                width: 50%;
+                width: 49%;
                 background-color: $orange;
             }
         }

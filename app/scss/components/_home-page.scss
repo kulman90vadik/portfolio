@@ -74,6 +74,9 @@
         @include max($sm) {
             padding-left: 25px;
         }
+        @include max($s) {
+            padding-left: 15px;
+        }
     }
     &__title {
         font-family: $Ubuntu;
@@ -163,7 +166,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        max-width: 255px;
+        max-width: 215px;
         width: 100%;
         text-transform: uppercase;
         outline: transparent;
